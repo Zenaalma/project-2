@@ -1,0 +1,6 @@
+<img src=<%=@pet.name%> >
+<h1> <%=@pet.number%> </h1>
+<p> <%=@pet.age%> </p>
+<p> <%=@pet.img%> </p>
+<h4><%=link_to 'delete', pet_path(@book) ,method: :delete %></h4>
+<%= link_to 'update', edit_pet_path(@pet)%>
