@@ -1,26 +1,32 @@
-<%= form_with(model: pet, local: true) do |form| %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+<%# form_with(model: pet, local: true) do |form| %>
+<%= form_for :pet do |f| %>
+<div>
+    <%= f.label 'owner phone no' %>
+    <%= f.text_field :number %>
   </div>
 
-  <div class="field">
-    <%= form.label :number %>
-    <%= form.text_field :number %>
+  <div>
+    <%= f.label 'pet type' %>
+    <%= f.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :age %>
-    <%= form.text_field :age %>
+  
+  <div>
+    <%= f.label 'pet age' %>
+    <%= f.text_field :age %>
   </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :imagd%>
+  <div >
+    <%= f.label 'pet image' %>
+    <%= f.text_field :img%>
+  </div>
+  <div >
+    <%= f.label 'description' %>
+    <%= f.text_field :description%>
   </div>
 
-  <div class="actions">
-    <%= form.submit 'save' %>
+  <div>
+    <%= f.submit 'find home' %>
   </div>
+
 <% end %>

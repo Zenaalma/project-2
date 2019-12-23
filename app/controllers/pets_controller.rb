@@ -11,17 +11,26 @@ class PetsController < ApplicationController
   end
 
   def edit
-    @book = Book.find(params[:id])
+    @pet = Pet.find(params[:id])
   end
 
   def new
     @pet = current_user.pets.new
+    # {name:nil,number:nil,user_id:3}
   end
 
   def create
-    @pet = current_user.pets.new (pet_params)
-    redirect_to pets_path (@pet)
+    # debugger
+    @pet = current_user.pets.new(pet_params)
+    # {name:'sdss',number:'04434'}
+    if @pet.save
+      redirect_to root_path
+    else
+      redirect_to new_pet_path
+    end
+    
   end
+
 
   def update 
     @pet = Pet.find(params[:id])
@@ -36,14 +45,12 @@ class PetsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_car
       @pet = Pet.find(params[:id])
     end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
+   
     def pet_params
-      params.require(:pet).permit( :name, :number, :age, :img)
+      params.require(:pet).permit( :name, :number, :age, :img, :description)
     end
 
 end

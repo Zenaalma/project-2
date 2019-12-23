@@ -1,3 +1,27 @@
 // Place all the styles related to the Pets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.pets.index img{
+    width: 150px;
+    height: 150px;
+}
+.pets.index .container {
+display: flex;
+justify-content: space-between;
+
+}
+.pets.show img{
+    width: 150px;
+    height: 150px;
+
+}
+.application nav{
+
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+

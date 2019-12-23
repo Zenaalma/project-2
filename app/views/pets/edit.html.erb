@@ -1,6 +1,37 @@
-<h1>Edit pets</h1>
+<h1>Edit your pet offer</h1>
 
-<%= render 'form', pets: @pet %>
+<%# render 'form', pet: @pet %>
+<%= form_for @pet, url: {action: "update"} do |form|%>
+   
+   <%= form.label "Owner Phone No" %>
+    <%= form.number_field :number %>
+
+   <br>
+    <%= form.label "Pet Name"%>
+    <%= form.text_field :name%>
+
+   <br>
+   <%= form.label 'pet age' %>
+   <%= form.number_field :age %>
+   <br>
+
+   <%= form.label 'pet image' %>
+   <%= form.text_field :img %>
+   <br>
+  
+    <%= form.label 'description' %>
+    <%= form.text_field :description%>
+
+
+
+   <%= form.submit 'find home' %>
+
+<%end%>
+<%# #description  %>
+<%# link_to 'Back', pets_path %>
+
+<%# render 'form', pets: @pet %>
 
 <%= link_to 'Show', @pet %> |
 <%= link_to 'Back', pets_path %>
+

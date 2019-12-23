@@ -1,11 +1,27 @@
-<h1> All the Pets </h1>
-<h3><%= link_to 'add pet' , new_pet_path%></h3>
-<% @pet.each do |pet|%> 
-<h1><%= link_to pet.name , pet_path(pet)%><h1>
-<hr>
+<h1> Adopt A pet  </h1>
+<div class='container'>
 
 
 
+
+<% @pet.each do |pet|%>
+<div class='sub-container'> 
+
+    <div class='img'>
+            <img  src="<%=pet.img%>">
+
+    </div>
+
+    <div class='name'>
+    <h1><%= link_to pet.name , pet_path(pet)%><h1>
+    </div>
+
+
+
+
+</div> 
 <%end%>
+</div>
+<h3><%= link_to 'Rehome your pet ' , new_pet_path%></h3>
 <%# 
 every item edit + delete  %>

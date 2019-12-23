@@ -9,7 +9,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body  class="<%= controller_name %> <%= action_name %>">
+
+  <nav>
+    <%= link_to "Adopt a pet",root_path %>
+    <%= link_to "rehome your pet",new_pet_path %>
+    <%= link_to "sign in",new_user_session_path %>
+    <%= link_to "sign out",destroy_user_session_path %>
+  </nav>
+
   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>
