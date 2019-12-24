@@ -2,20 +2,52 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.pets.index img{
-    width: 150px;
-    height: 150px;
+
+// .pets.index img{
+//     width: 150px;
+//     height: 150px;
+// }
+// .pets.index .container1 {
+// display: flex;
+// justify-content: space-around;
+// margin-top: 80px;
+// margin-bottom: 80px;
+
+// }
+
+// .card{
+//    display: flex;
+// }
+// // .pet .index .card-group{
+//     display: flex;
+// }
+
+// .pets.index img
+// width: 244px;
+// height: 180px;
+
+// .pets.show img{
+//     width: 150px;
+//     height: 150px;
+
+// // }
+// btn btn-success btn-lg btn-block{
+//     width: 50%;
+//     color:red;
+
+// }
+
+.container1{
+    text-align: center;
 }
-.pets.index .container {
-display: flex;
-justify-content: space-between;
+
+.card-columns {
+    margin-top: 30px;
+margin-bottom: 10px;
+
 
 }
-.pets.show img{
-    width: 150px;
-    height: 150px;
 
-}
 .application nav{
 
     display: block;
@@ -24,4 +56,16 @@ justify-content: space-between;
     padding: 14px 16px;
     text-decoration: none;
 }
+.butt1 {
+    margin-top: 70px;
 
+
+}
+.title{
+    text-align: center;
+    // margin-bottom: 30px;
+}
+
+    .titlecontainer{
+        text-align: center;
+    }

@@ -2,7 +2,7 @@ class PetsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @pet = Pet.all
+    @pets = Pet.all
 
   end
 

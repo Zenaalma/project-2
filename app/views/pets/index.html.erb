@@ -1,27 +1,27 @@
-<h1> Adopt A pet  </h1>
-<div class='container'>
+
+<%# <div class='container'> %>
+<h1 class="container1"> Adopt A pet  </h1>
+<div class="container">
+
+<div class="card-columns col-md container">
+<%@pets.each do |pet| %>
 
 
+  <div class="card">
+    <img class="card-img-top" src= <%=pet.img%> alt="Card image cap">
+    
+    <div class="card-body container">
+       <h5><%= link_to pet.name , pet_path(pet) , :class =>"card-title text-success"%></h5>
+       <p><%= link_to pet.description , pet_path(pet), :class =>"card-text text-secondary"%></p>
+      </div>
 
+      <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+       </div>
+     </div>
 
-<% @pet.each do |pet|%>
-<div class='sub-container'> 
-
-    <div class='img'>
-            <img  src="<%=pet.img%>">
-
-    </div>
-
-    <div class='name'>
-    <h1><%= link_to pet.name , pet_path(pet)%><h1>
-    </div>
-
-
-
-
-</div> 
-<%end%>
-</div>
-<h3><%= link_to 'Rehome your pet ' , new_pet_path%></h3>
-<%# 
-every item edit + delete  %>
+  <%end%>
+  </div>
+  </div>
+  <%= link_to 'Rehome your pet ',
+new_pet_path ,:class =>"btn btn-success btn-lg btn-block container"%>

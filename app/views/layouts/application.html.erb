@@ -11,15 +11,52 @@
 
   <body  class="<%= controller_name %> <%= action_name %>">
 
-  <nav>
-    <%= link_to "Adopt a pet",root_path %>
-    <%= link_to "rehome your pet",new_pet_path %>
-    <%= link_to "sign in",new_user_session_path %>
-    <%= link_to "sign out",destroy_user_session_path %>
-  </nav>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
+  <a class="navbar-brand bold text " href="#">Pets Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    
+      <li class="nav-item active">
+      <%= link_to "Adopt a pet",root_path, :class => "nav-link"  %>
+        
+      </li>
+      
+      
+
+      <% if user_signed_in? %>
+      <li class="nav-item active">
+        <%= link_to "rehome your pet",new_pet_path , :class => "nav-link"%>
+      </li>
+
+      
+
+      <li class="nav-item active">
+        <%= link_to "sign out",destroy_user_session_path, method: :delete ,:class => "nav-link text-success" %>
+      </li>
+
+      <% else %>
+
+      <li class="nav-item active">
+        <%= link_to "sign in",new_user_session_path, :class => "nav-link text-success" %>
+      </li>
+
+      <li class="nav-item active">
+        <%= link_to "sign up",new_user_registration_path, :class => "nav-link text-success" %>
+      </li>
+
+      <% end%>
+     
+    </ul>
+    
+  </div>
+</nav>
   <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+   <%# <p class="alert"><%= alert</p> %> 
     <%= yield %>
   </body>
 </html>

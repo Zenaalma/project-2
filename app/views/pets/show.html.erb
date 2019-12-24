@@ -4,6 +4,6 @@
 <p> <label>Pet age: </label> <%=@pet.age%> </p>
 <p><label> description: </label> <%=@pet.description %></p>
 
-<h4><%=link_to 'Remove', pet_path(@pet) ,method: :delete %></h4>
+<%=link_to 'Remove', pet_path(@pet) ,method: :delete %>
 
 <%= link_to 'Edit', edit_pet_path(@pet)%>
