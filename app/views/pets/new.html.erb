@@ -2,33 +2,34 @@
 
 <div class="container">
 <%= form_for @pet, url: {action: "create"} do |form|%>
-   <%= form.label 'owner Phone No', :class => "col-sm-2 col-form-label"  %>
+    <%= form.label 'owner Phone No', :class => "col-sm-2 col-form-label"  %>
     <%= form.number_field :number %>
 
-   <br>
+      <br>
 
     <%= form.label "Pet type", :class => "col-sm-2 col-form-label"%>
     <%= form.text_field :name%>
 
-   <br>
+      <br>
     
-   <%= form.label 'pet age' , :class => "col-sm-2 col-form-label"%>
-   <%= form.number_field :age %>
-   <br>
+    <%= form.label 'pet age' , :class => "col-sm-2 col-form-label"%>
+    <%= form.number_field :age %>
+      <br>
 
-   <%= form.label 'pet image', :class => "col-sm-2 col-form-label" %>
-   <%= form.text_field :img %>
-   <br>
+    <%= form.label 'pet image', :class => "col-sm-2 col-form-label" %>
+    <%= form.text_field :img %>
+      <br>
 
     <%= form.label 'description', :class => "col-sm-2 col-form-label" %>
     <%= form.text_area :description%>
-     <br>
-<div class ="butt1 container">
-   <%= form.submit 'find home', :class => "btn btn-success"  %>
+      <br>
+
+    <div class ="butt1 container">
+    <%= form.submit 'find home', :class => "btn btn-success"  %>
     </div>
     <div class ="butt2 container">
-   <br>
-   <%=link_to 'Back', pets_path , :class => "btn btn-primary"%>
+       <br>
+    <%=link_to 'Back', pets_path , :class => "btn btn-primary"%>
    
   
 </div>

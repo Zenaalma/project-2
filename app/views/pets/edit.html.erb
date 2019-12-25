@@ -1,30 +1,33 @@
-<h1>Edit your pet offer</h1>
+<h1>Edit your information</h1>
 
 <%# render 'form', pet: @pet %>
+<div class="new container">
 <%= form_for @pet, url: {action: "update"} do |form|%>
    
-   <%= form.label "Owner Phone No" %>
+   <%= form.label "Owner Phone No", :class => "col-sm-2 col-form-label" %>
     <%= form.number_field :number %>
 
-   <br>
-    <%= form.label "Pet Name"%>
+     <br>
+    <%= form.label "Pet Name", :class => "col-sm-2 col-form-label"%>
     <%= form.text_field :name%>
 
-   <br>
-   <%= form.label 'pet age' %>
-   <%= form.number_field :age %>
-   <br>
+     <br>
+    <%= form.label 'pet age' , :class => "col-sm-2 col-form-label"%>
+    <%= form.number_field :age %>
+     <br>
 
-   <%= form.label 'pet image' %>
-   <%= form.text_field :img %>
-   <br>
+    <%= form.label 'pet image', :class => "col-sm-2 col-form-label"%>
+    <%= form.text_field :img %>
+     <br>
   
-    <%= form.label 'description' %>
+    <%= form.label 'description', :class => "col-sm-2 col-form-label" %>
     <%= form.text_field :description%>
+     </div>
 
-
-
-   <%= form.submit 'find home' %>
+     <br>
+<div class ="butt1 container">
+   <%= form.submit 'Edit', :class => "btn btn-success" %>
+   <div>
 
 <%end%>
 <%# #description  %>

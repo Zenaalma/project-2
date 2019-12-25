@@ -27,10 +27,9 @@
 // height: 180px;
 
 // .pets.show img{
-//     width: 150px;
-//     height: 150px;
+    
 
-// // }
+// }
 // btn btn-success btn-lg btn-block{
 //     width: 50%;
 //     color:red;
@@ -68,4 +67,56 @@ margin-bottom: 10px;
 
     .titlecontainer{
         text-align: center;
+        margin-bottom: 35px;
     }
+    
+   h1{
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+   }
+   .tab .container{
+    margin-left:200px;
+       
+}
+.im{
+    width: 200px;
+    height:200px;
+    margin-bottom: 40px;
+}
+.but{
+    margin-left: 500px;
+}
+
+.edit_pet{
+
+    margin-top: 70px;
+}
+.navbar-brand{
+
+    
+    font-family: 'Anton', sans-serif;
+
+    font-size: 27px !important ;
+}
+
+.nav-item{
+    font-size: 20px;
+
+}
+.pet-container{
+    text-align: center;
+}
+
+.pet-card {
+    box-shadow: 8px 8px 10px gray;
+}
+.pet-card:hover {
+    box-shadow: 15px 15px 15px gray;
+}
+.pet-img{
+    height: 220px;
+
+}
+.brand-color{
+    text-shadow:1px 2px green !important;
+}

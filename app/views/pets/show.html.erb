@@ -1,9 +1,30 @@
+<h1 class="container1"> Edit your information </h1>
+<div class="container pet-container"><img class="im" src=<%=@pet.img%>>
+<br>
 
-<div><img src=<%=@pet.img%>></div>
-<p><label>Owner Phone No. : </label><%=@pet.number%> </p>
-<p> <label>Pet age: </label> <%=@pet.age%> </p>
-<p><label> description: </label> <%=@pet.description %></p>
+<div class="tab container w-50 ">
+<table class="table table-sm table-success table-bordered" >
+  
+  <tbody>
+    <tr>
+      <th scope="col-sm"> Owner Phone </th> <td><%= @pet.number %></td>
+    </tr>
+    <tr>
+       <th scope="col-sm"> pet name </th> <td><%= @pet.name %></td>
+     </tr>
+      <th scope="col-sm"> pet age </th> <td> <%= @pet.age %></td>
+      <tr>
+      <th scope="col-sm"> Description </th> <td><%= @pet.description %></td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-<%=link_to 'Remove', pet_path(@pet) ,method: :delete %>
+<% if (current_user.id == @pet.user_id) %>
 
-<%= link_to 'Edit', edit_pet_path(@pet)%>
+<div class ="but container">
+<%= link_to 'Edit', edit_pet_path(@pet) , :class => "btn btn-success" %>
+
+<%=link_to 'Remove', pet_path(@pet) ,method: :delete , :class => "btn btn-danger"  %>
+</div>
+<% end %>

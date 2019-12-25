@@ -7,13 +7,16 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+   <link href="https://fonts.googleapis.com/css?family=Anton|Rubik&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
   </head>
 
   <body  class="<%= controller_name %> <%= action_name %>">
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
-  <a class="navbar-brand bold text " href="#">Pets Home</a>
+
+<%= link_to "Pets Home",root_path, :class => "navbar-brand bold text brand-color"%>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -54,9 +57,13 @@
     </ul>
     
   </div>
-</nav>
+  <div>
   <p class="notice"><%= notice %></p>
-   <%# <p class="alert"><%= alert</p> %> 
+  <p class="alert"><%= alert  %></p>
+  </div>
+  
+</nav>
+  
     <%= yield %>
   </body>
 </html>

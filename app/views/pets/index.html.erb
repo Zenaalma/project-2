@@ -3,12 +3,12 @@
 <h1 class="container1"> Adopt A pet  </h1>
 <div class="container">
 
-<div class="card-columns col-md container">
+<div class="card-columns col-md-8 container">
 <%@pets.each do |pet| %>
 
 
-  <div class="card">
-    <img class="card-img-top" src= <%=pet.img%> alt="Card image cap">
+  <div class="card pet-card" >
+    <img class="card-img-top pet-img" src=<%=pet.img%> alt="Card image cap">
     
     <div class="card-body container">
        <h5><%= link_to pet.name , pet_path(pet) , :class =>"card-title text-success"%></h5>
